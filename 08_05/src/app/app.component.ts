@@ -9,5 +9,25 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = '08_05';
+  title = 'introducao-angular';
+
+  isMouseOver: boolean = false;
+  valorAtual: string = '';
+  valorSalvo: string = '';
+
+  botaoClicado() {
+    alert('Botão clicado!');
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    this.valorAtual = event.key;
+  }
+
+  salvarValor(event: any) {
+    this.valorSalvo = event;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
+  }
 }
